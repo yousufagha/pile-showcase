@@ -146,6 +146,11 @@ td.r, th.r { text-align: right; font-variant-numeric: tabular-nums; }
 .exc .impact { font-family: var(--display); font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .exc .actions { display: flex; flex-wrap: wrap; gap: 6px; }
 .exc .outcome { font-size: .86rem; color: var(--ok); }
+/* even spacing: content stacks from the top at one gap and the action row sits at the bottom,
+   so a card stretched to a taller neighbour does not spread its lines apart */
+.exc { display: flex; flex-direction: column; justify-content: flex-start; }
+.exc > * { margin: 0; }
+.exc > .actions { margin-top: auto; padding-top: 4px; }
 
 /* registers */
 .regs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
