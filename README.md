@@ -49,3 +49,10 @@ flowchart LR
 3. **Extract.** Values are found by their labels, not fixed positions, so a supplier never seen before is still read with no template. Lines must multiply out, totals add up, and tax match the local rate and tax-invoice rules.
 4. **Link.** Each delivery, invoice, credit and payment finds its order. Each line finds its order line by item code, steel section (310UB46 is UB 310x46) or description, with units converted.
 5. **Report.** Each order's stage and what is owed, plus exceptions: price or quantity variance, missing delivery, no matching order, duplicate, or a bill on the supplier's statement that never arrived.
+
+## The rules it keeps
+
+- **The model reads; it never decides.** An AI model is used only to read photos and scans. Every match, sum, link and verdict is ordinary code that can be audited line by line.
+- **Nothing is guessed.** A value is accepted only with evidence: printed next to its label, matched to the supplier list, a structured e-invoice field, or, for a photo, read the same by two different models. Anything else is left blank or held for review.
+- **Every decision is kept.** Approvals, rejections and tolerance rules are recorded with who made them and when.
+- **Nothing is posted.** It proposes balanced journal entries for the accounting package; a person posts them.
