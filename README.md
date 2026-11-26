@@ -31,3 +31,21 @@ Open the [demo](https://yousufagha.github.io/pile-showcase/) and press **Walk me
 5. **The result.** The share of bills needing a person, week by week. In the demo, 6 of 18 bills need a person; the rest matched on their own.
 
 The page opens on a simple view. **Show the full detail** adds how each document was read, accuracy figures, owed by supplier, freight, proposed journals and every document.
+
+## How it works
+
+```mermaid
+flowchart LR
+  A[Pile of files<br/>PDF, Excel, CSV, Word,<br/>email, e-invoice, photo] --> B[Read<br/>text layer, cells,<br/>structure]
+  B --> C[Recognise<br/>type from the<br/>printed title]
+  C --> D[Extract<br/>values by label,<br/>checked]
+  D --> E[Link<br/>to the purchase order,<br/>line by line]
+  E --> F[Report<br/>goods, paperwork,<br/>money owed]
+  E --> G[Exceptions<br/>for a person]
+```
+
+1. **Read.** Most supplier paperwork already carries its text as data, so it is read directly: a PDF's text layer word by word, spreadsheet cells, Word tables, email attachments, Peppol e-invoice fields.
+2. **Recognise.** The document type comes from its printed title (Tax Invoice, Delivery Note, Statement), never from the file name. Multi-document PDFs are split, and a page 2 that arrived alone is joined to its page 1.
+3. **Extract.** Values are found by their labels, not fixed positions, so a supplier never seen before is still read with no template. Lines must multiply out, totals add up, and tax match the local rate and tax-invoice rules.
+4. **Link.** Each delivery, invoice, credit and payment finds its order. Each line finds its order line by item code, steel section (310UB46 is UB 310x46) or description, with units converted.
+5. **Report.** Each order's stage and what is owed, plus exceptions: price or quantity variance, missing delivery, no matching order, duplicate, or a bill on the supplier's statement that never arrived.
