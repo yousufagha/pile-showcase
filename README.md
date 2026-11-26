@@ -79,3 +79,9 @@ The country is a setting per pile: currency, tax, the supplier's tax number and 
 | UAE | AED | VAT 5% | TRN |
 | India | INR | GST (CGST and SGST, or IGST) | GSTIN |
 | Australia | AUD | GST 10% | ABN |
+
+## On your own files
+
+A trial link reads your own files and shows the same page for them: choose your country, then upload files, a folder or a .zip. Files are deleted before the results come back, and no AI service sees them. The link is shared on request.
+
+<img src="assets/phone.png" alt="The demo on a phone" width="300">
