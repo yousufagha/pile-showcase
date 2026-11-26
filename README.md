@@ -56,3 +56,16 @@ flowchart LR
 - **Nothing is guessed.** A value is accepted only with evidence: printed next to its label, matched to the supplier list, a structured e-invoice field, or, for a photo, read the same by two different models. Anything else is left blank or held for review.
 - **Every decision is kept.** Approvals, rejections and tolerance rules are recorded with who made them and when.
 - **Nothing is posted.** It proposes balanced journal entries for the accounting package; a person posts them.
+
+## Results so far
+
+Scored against answer keys on test packs, run without the AI model (so photos and scans count as misses):
+
+| Pack | Documents found | Header values right | Line values right | Values accepted as fact |
+|---|---|---|---|---|
+| September, UAE (73 documents) | 73 of 73 | 99.0% | 97.2% | 466, none wrong |
+| September, India (73) | 73 of 73 | 98.3% | 97.2% | 504, none wrong |
+| September, Australia (73) | 72 of 73 | 97.3% | 97.2% | 467, none wrong |
+| Public sample invoices (13, real) | 13 of 13 | 59.0% | 12.8% | 9, none wrong |
+
+The test packs were written to test the module, so they show how it behaves, not how accurate it is on real paperwork. The public invoices are real but foreign layouts: most of their values are held rather than guessed, which is the point.
