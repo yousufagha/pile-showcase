@@ -19,3 +19,15 @@ For every purchase order, three questions:
 | **Money** | Invoiced, not yet paid | BF-INV-31131: AED 3,563.10 left after a part payment |
 
 Anything that does not reconcile becomes an exception, explained in plain words with the money at stake.
+
+## The demo in five steps
+
+Open the [demo](https://yousufagha.github.io/pile-showcase/) and press **Walk me through it**.
+
+1. **Drop in the pile.** 72 files: PDFs, spreadsheets, emails, e-invoices, photos. No sorting, no naming rules. Each file is sorted by what it says.
+2. **Every value has evidence.** A value is taken only where it is printed next to its label, then the totals and VAT are checked. Nothing is guessed.
+3. **Where every order is.** Each purchase order sits on a board by stage, showing what is still owed on it.
+4. **Only what needs a person.** Anything that does not reconcile becomes a card with the money at stake and a suggested fix.
+5. **The result.** The share of bills needing a person, week by week. In the demo, 6 of 18 bills need a person; the rest matched on their own.
+
+The page opens on a simple view. **Show the full detail** adds how each document was read, accuracy figures, owed by supplier, freight, proposed journals and every document.
