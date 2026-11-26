@@ -69,3 +69,13 @@ Scored against answer keys on test packs, run without the AI model (so photos an
 | Public sample invoices (13, real) | 13 of 13 | 59.0% | 12.8% | 9, none wrong |
 
 The test packs were written to test the module, so they show how it behaves, not how accurate it is on real paperwork. The public invoices are real but foreign layouts: most of their values are held rather than guessed, which is the point.
+
+## Countries
+
+The country is a setting per pile: currency, tax, the supplier's tax number and the tax-invoice rules.
+
+| Country | Currency | Tax | Supplier tax number |
+|---|---|---|---|
+| UAE | AED | VAT 5% | TRN |
+| India | INR | GST (CGST and SGST, or IGST) | GSTIN |
+| Australia | AUD | GST 10% | ABN |
