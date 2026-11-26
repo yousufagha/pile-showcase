@@ -88,6 +88,6 @@ A trial link reads your own files and shows the same page for them: choose your 
 
 ## Built with
 
-Python 3.12 as a plain library with a command line, so it can sit inside a host system whatever its stack: pdfplumber and pypdf for PDFs, openpyxl, python-docx and lxml for the other formats, SQLite for the document ledger, Flask for the upload link. 193 tests. The demo is one self-contained HTML page with no external requests.
+Python 3.12 as a plain library with a command line, so it can sit inside a host system whatever its stack: pdfplumber and pypdf for PDFs, openpyxl, python-docx and lxml for the other formats, SQLite for the document ledger, Flask for the upload link. 193 tests. The demo is one self-contained HTML page; its only outside request is for web fonts.
 
 This repository holds the demo only; the module's source is private.
