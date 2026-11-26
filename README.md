@@ -85,3 +85,9 @@ The country is a setting per pile: currency, tax, the supplier's tax number and 
 A trial link reads your own files and shows the same page for them: choose your country, then upload files, a folder or a .zip. Files are deleted before the results come back, and no AI service sees them. The link is shared on request.
 
 <img src="assets/phone.png" alt="The demo on a phone" width="300">
+
+## Built with
+
+Python 3.12 as a plain library with a command line, so it can sit inside a host system whatever its stack: pdfplumber and pypdf for PDFs, openpyxl, python-docx and lxml for the other formats, SQLite for the document ledger, Flask for the upload link. 193 tests. The demo is one self-contained HTML page with no external requests.
+
+This repository holds the demo only; the module's source is private.
